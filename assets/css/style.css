@@ -162,6 +162,10 @@ h6 {
   height: 70px;
 }
 
+#header.header-scrolled #logo {
+  margin-top: 10px;
+}
+
 #header #logo h1 {
   font-size: 36px;
   margin: 0;
@@ -188,7 +192,12 @@ h6 {
 
 @media (max-width: 992px) {
   #header #logo img {
-    max-height: 30px;
+    margin-top: -10px;
+    max-width: 80%;
+  }
+
+  #header.header-scrolled #logo {
+    margin-top: 30px;
   }
 }
 
@@ -220,7 +229,9 @@ h6 {
 
 @media (max-width: 992px) {
   .buy-tickets {
-    margin: 0 15px 0 0;
+    margin-top: -20px;
+    margin-right: 40px;
+    margin-left: 0;
   }
 }
 
@@ -379,6 +390,7 @@ h6 {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+    margin-top: -20px;
   }
 
   .navbar ul {
@@ -400,7 +412,7 @@ h6 {
 
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
-  top: 15px;
+  top: 40px;
   right: 15px;
 }
 
@@ -922,14 +934,14 @@ h6 {
 
 #schedule .schedule-item h4 span {
   font-style: italic;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   font-weight: normal;
   font-size: 16px;
 }
 
 #schedule .schedule-item p {
   font-style: italic;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   margin-bottom: 0;
 }
 
@@ -1232,6 +1244,15 @@ h6 {
   #subscribe button {
     margin-top: 10px;
   }
+
+  #subscribe form #sub{
+    min-width: 300px;
+    display: block !important;
+  }
+
+  #subscribe form #sub button {
+    margin-left: 30% !important;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1462,6 +1483,13 @@ h6 {
   }
 }
 
+@media (max-width: 460px) {
+  #contact .contact-info a,
+  #contact .contact-info address {
+    color: var(--color-primary);
+  }
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1618,4 +1646,10 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #ddd;
+}
+
+@media (max-width: 460px) {
+  #footer .footer-top {
+    text-align: center;
+  }
 }
